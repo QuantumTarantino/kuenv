@@ -42,7 +42,7 @@ def hyper():
 
 def oh_my_zsh():
     print(f"{bcolors.OKGREEN}Downloading and installing oh my zsh...{bcolors.ENDC}\n")
-    os.system("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" "" --unattended")
+    os.system("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended")
 
 def powerlevel10k():
     print(f"{bcolors.OKGREEN}Downloading and installing powerlevel10k...{bcolors.ENDC}\n")
