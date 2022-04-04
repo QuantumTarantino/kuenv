@@ -1,6 +1,8 @@
 import os
 from .colors import bcolors
 
+config_path = os.path.join(os.path.dirname(__file__), "../../../config/")
+
 def zsh():
     print(f"{bcolors.OKGREEN}Installing zsh as default...{bcolors.ENDC}\n")
     os.system("sudo apt-get install zsh -y")
@@ -18,8 +20,8 @@ def hack_nerd_fonts():
     os.system("unzip /tmp/Hack.zip -d /tmp/hack-nerd-fonts")
     os.system("sudo cp /tmp/hack-nerd-fonts/* /usr/local/share/fonts/")
 
-def hyper():
-    print(f"{bcolors.OKGREEN}Downloading, installing and setting hyper term emulator...{bcolors.ENDC}\n")
+def tabby():
+    print(f"{bcolors.OKGREEN}Downloading, installing and setting tabby term emulator...{bcolors.ENDC}\n")
 
     # Downloading
     os.system("\
@@ -37,8 +39,8 @@ def hyper():
     # Setting
     os.system("sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/tabby 50")
     os.system("echo \"TerminalEmulator=custom-TerminalEmulator\" > $HOME/.config/xfce4/helpers.rc")
-    os.system("sed -i \"s/fontSize:.*/fontSize: 14/\" $HOME/.config/tabby/config.yaml")
-    os.system("sed -i \"s/font:.*/font: Hack Nerd Font/\" $HOME/.config/tabby/config.yaml")
+    os.system("mkdir -p $HOME/.config/tabby")
+    os.system("cp "+ config_path + "config.yaml" +" $HOME/.config/tabby")
 
 def oh_my_zsh():
     print(f"{bcolors.OKGREEN}Downloading and installing oh my zsh...{bcolors.ENDC}\n")

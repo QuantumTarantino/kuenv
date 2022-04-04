@@ -7,7 +7,7 @@ def install_kali_env():
     # Terminal
     zsh()
     hack_nerd_fonts()
-    hyper()
+    tabby()
     oh_my_zsh()
     powerlevel10k()
     bat()
