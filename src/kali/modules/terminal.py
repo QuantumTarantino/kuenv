@@ -73,4 +73,5 @@ def lsd():
 
 def fzf():
     print(f"{bcolors.OKGREEN}Installing fzf...{bcolors.ENDC}\n")
-    os.system("git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/bin/fzf $HOME/bin/fzf/install")
+    os.system("git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/bin/fzf")
+    os.system("$HOME/bin/fzf/install --key-bindings --completion --update-rc")
