@@ -15,9 +15,9 @@ banner = """
 def menu():
     print(banner)
     time.sleep(1)
-    print("1 -> Instalar para Kali")
+    print("1 -> Install for Kali")
     time.sleep(1)
-    print("\n2 -> Salir")
+    print("\n2 -> Exit")
     time.sleep(1)
 
     option = input("\n-->> ")
