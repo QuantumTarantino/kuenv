@@ -57,7 +57,7 @@ hotkeys:
   toggle-fullscreen:
     - F11
   close-tab:
-    - Ctrl-Shift-W
+    - - Ctrl-W
   reopen-tab:
     - Ctrl-Shift-T
   toggle-last-tab: []
@@ -113,7 +113,7 @@ hotkeys:
   split-right:
     - Ctrl-Shift-E
   split-bottom:
-    - Ctrl-Shift-D
+    - - Ctrl-Shift-O
   split-left: []
   split-top: []
   pane-nav-right:
@@ -130,7 +130,8 @@ hotkeys:
     - Ctrl-Alt-]
   pane-maximize:
     - Ctrl-Alt-Enter
-  close-pane: []
+  close-pane:
+    - - Ctrl-Shift-W
   switch-profile:
     - Ctrl-Alt-T
   profile-selector:
@@ -162,18 +163,18 @@ terminal:
       - '#89DDFF'
       - '#ffffff'
   font: Hack Nerd Font
+  fontSize: 17
   customColorSchemes: []
-  fontSize: 16
-ssh:
-  knownHosts: []
+ssh: {}
 configSync:
   parts: {}
 clickableLinks: {}
-appearance: {}
+appearance:
+  css: |-
+    /* * { color: blue !important; } */
+    ::-webkit-scrollbar { display: none; }
 hacks: {}
+enableAnalytics: false
 enableWelcomeTab: false
 pluginBlacklist: []
 profileDefaults: {}
-electronFlags:
-  - - force_discrete_gpu
-    - '0'
